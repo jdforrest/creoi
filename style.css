@@ -226,6 +226,16 @@ section.content a:hover, nav a:hover, footer a:hover, .box380 a:hover, section.c
 	float: left;
 	margin-right: 20px;
 }
+
+/* testing here for UL and OL, 12/2/2013 jdforrest */
+.box460 ul, .box460 ol{
+	margin-top: -20px; /* used a negative value here instead of changing p element styles */
+	margin-bottom: 20px;
+}
+.box460 li{
+	margin-left: 30px;
+}
+
 .box300, .box300-home {
 	width: 300px;
 	float: left;
