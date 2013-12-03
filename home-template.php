@@ -106,17 +106,17 @@
 					<?php 
 						$today = date("m.d.");
 						if($today < 04.15){
-							echo "<h1>April 15, " . date("Y") . "</h1>";
+							echo "<h1 class='duedates'>April 15, " . date("Y") . "</h1>";
 						}
 						elseif($today >= 04.30 && $today <= 10.15){
-							echo "<h1>October 15, " . date("Y") . "</h1>";
+							echo "<h1 class='duedates'>October 15, " . date("Y") . "</h1>";
 						}
 						else {
-							echo "<h1>April 15, " . (date("Y") + 1) . "</h1>";
+							echo "<h1 class='duedates'>April 15, " . (date("Y") + 1) . "</h1>";
 						}				
 					?>
 					<p>
-						For guidelines and other information, go to the <a href="<?php echo get_permalink(8); ?>">Apply page.</a>
+						For guidelines and other information, go to <a href="<?php echo get_permalink(8); ?>">Apply.</a>
 					</p>
 				<!-- Apply widget in Spanish -->
 				<?php } else { ?>
@@ -129,13 +129,13 @@
 					<?php 
 						$today = date("m.d.");
 						if($today < 04.15){
-							echo "<h1>15 de Abril, " . date("Y") . "</h1>";
+							echo "<h1 class='duedates'>15 de Abril, " . date("Y") . "</h1>";
 						}
 						elseif($today >= 04.30 && $today <= 10.15){
-							echo "<h1>15 de Octubre, " . date("Y") . "</h1>";
+							echo "<h1 class='duedates'>15 de Octubre, " . date("Y") . "</h1>";
 						}
 						else {
-							echo "<h1>15 de Abril, " . (date("Y") + 1) . "</h1>";
+							echo "<h1 class='duedates'>15 de Abril, " . (date("Y") + 1) . "</h1>";
 						}				
 					?>
 					<p>
@@ -156,13 +156,13 @@
 					<?php 
 						$today = date("m.d.");
 						if($today < 05.31){
-							echo "<h1>May 31, " . date("Y") . "</h1>";
+							echo "<h1 class='duedates'>May 31, " . date("Y") . "</h1>";
 						}
 						elseif($today >= 05.31 && $today <= 11.29){
-							echo "<h1>November 30, " . date("Y") . "</h1>";
+							echo "<h1 class='duedates'>November 30, " . date("Y") . "</h1>";
 						}
 						else {
-							echo "<h1>May 31, " . (date("Y") + 1) . "</h1>";
+							echo "<h1 class='duedates'>May 31, " . (date("Y") + 1) . "</h1>";
 						}				
 					?>
 					<p>
@@ -180,13 +180,13 @@
 					<?php 
 						$today = date("m.d.");
 						if($today < 05.31){
-							echo "<h1>31 de Mayo, " . date("Y") . "</h1>";
+							echo "<h1 class='duedates'>31 de Mayo, " . date("Y") . "</h1>";
 						}
 						elseif($today >= 05.31 && $today <= 11.29){
-							echo "<h1>30 de Noviembre, " . date("Y") . "</h1>";
+							echo "<h1 class='duedates'>30 de Noviembre, " . date("Y") . "</h1>";
 						}
 						else {
-							echo "<h1>31 de Mayo, " . (date("Y") + 1) . "</h1>";
+							echo "<h1 class='duedates'>31 de Mayo, " . (date("Y") + 1) . "</h1>";
 						}				
 					?>				
 					<p>
