@@ -15,12 +15,13 @@
 				<!-- copyright notice in English -->
 				<?php if (ICL_LANGUAGE_CODE=='en') { ?>
 					<p>
-						Copyright &copy; <?php echo date("Y"); ?> <a href="http://www.creoi.org">CREOi</a> All Rights Reserved | <a href="mailto:info%40creoi%2ecom?subject=Hi, Michelle&body=Hi, Michelle, how are you?">info@creoi.org</a>
+						Copyright &copy; <?php echo date("Y"); ?> <a href="http://www.creoi.org">CREOi</a> All Rights Reserved 
+
 					</p>
 				<!-- copyright notice in Spanish -->
 				<?php } else { ?>
 					<p>
-						Copyright &copy; <?php echo date("Y"); ?> <a href="http://www.creoi.org">CREOi</a> Todos los derechos reservados | <a href="mailto:info%40creoi%2ecom?subject=Hi, Michelle&body=Hi, Michelle, how are you?">info@creoi.org</a>
+						Copyright &copy; <?php echo date("Y"); ?> <a href="http://www.creoi.org">CREOi</a> Todos los derechos reservados 
 					</p>	
 				<?php } ?>
 			</div><!--.box540-->
