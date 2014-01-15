@@ -1,10 +1,10 @@
 /*   
-Theme Name: CREOi Test Theme
+Theme Name: CREOi Theme
 Theme URI: http://creoi.org
-Description: Theme in development.
-Author: John Forrest
+Description: Theme developed for creoi.org.
+Author: John Forrest, David Thanphilom, Janet Mitchell, Christian Roehr
 Author URI: http://jdforrest.net
-Version: 1
+Version: 2
 */
 
 * {
@@ -239,8 +239,11 @@ section.content a:hover, nav a:hover, footer a:hover, .box380 a:hover, section.c
 .box300, .box300-home {
 	width: 300px;
 	float: left;
-	margin-right: 20px;
+	margin-right: 40px;
 	margin-bottom: 10px;
+}
+.box300-home:nth-of-type(5){
+	margin-right: 0px;
 }
 .box300-home h1 {
 	text-align: center;
@@ -407,13 +410,13 @@ footer div.box140 li:last-of-type {
 	margin-bottom: 10px;
 }
 .featured div:first-of-type {
-	width: 620px;
+	width: 640px;
 	margin-right: 20px;
 	float: left;
 }
 .featured div:last-of-type {
 	width: 300px;
-	float: left;
+	float: right;
 }
 .featured div:last-of-type img {
 	width: 296px;
