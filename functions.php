@@ -43,7 +43,38 @@
     		'after_title'   => '</h2>'
     	));
     }
+    
+	// creating custom excerpt
+	function new_trim_excerpt($text) { 
+	  global $post;
+	  if ( '' == $text ) {
+	    $text = get_the_content('');
+	    $text = apply_filters('the_content', $text);
+	    $text = str_replace('\]\]\>', ']]&gt;', $text);
+	    $text = strip_tags($text, '<i>');
+	    $excerpt_length = 55;
+	    $words = explode(' ', $text, $excerpt_length + 1);
+	    if (count($words)> $excerpt_length) {
+	      	array_pop($words);
+			
+			//Read More text first in English
+			if (ICL_LANGUAGE_CODE=='en') {
+				array_push($words, '<a class="read-more" href="'. get_permalink( get_the_ID() ) . '">Read More</a>');
+			} 		
+			//and in Spanish
+			else {
+				array_push($words, '<a class="read-more" href="'. get_permalink( get_the_ID() ) . '">Leer Más</a>');
+			}	
+				
+	      $text = implode(' ', $words);
+	    }
+	  }
+	return $text;
+	}
+	remove_filter('get_the_excerpt', 'wp_trim_excerpt');
+	add_filter('get_the_excerpt', 'new_trim_excerpt');
 
+/*
 	//adding read more tag to excerpt	
 	function new_excerpt_more( $more ) {
 			
@@ -58,7 +89,6 @@
 		}		
 	}
 	add_filter( 'excerpt_more', 'new_excerpt_more' );
-
-
+*/
 
 ?>
