@@ -189,7 +189,7 @@ section.content a:hover, nav a:hover, footer a:hover, .box380 a:hover, section.c
 	width: 780px;
 	float: left;
 }
-.box780 div:first-of-type, .box460 div:first-of-type, .box780-single div:first-of-type {
+.box780 div:first-of-type, .box460 div:first-of-type, .box620 div:first-of-type, .box780-single div:first-of-type {
 	overflow: hidden;
 	margin-bottom: 10px;
 }
@@ -233,11 +233,11 @@ section.content a:hover, nav a:hover, footer a:hover, .box380 a:hover, section.c
 }
 
 /* testing here for UL and OL, 12/2/2013 jdforrest */
-.box460 ul, .box460 ol{
+.box460 ul, .box460 ol, .box620 ul, .box620 ol{
 	margin-top: -20px; /* used a negative value here instead of changing p element styles */
 	margin-bottom: 20px;
 }
-.box460 li{
+.box460 li, .box620 li{
 	margin-left: 30px;
 }
 
@@ -432,7 +432,7 @@ footer div.box140 li:last-of-type {
 	overflow: hidden;
 	font-size: 0.875em;
 	margin-bottom: 10px;
-	width: 460px;
+	width: 100%;
 	float: left;
 	margin-right: 20px;
 }
@@ -502,7 +502,7 @@ div.responsive-icon img:hover {
 header .box380, nav, aside, .breadcrumbs, .page-nav, .gallery, footer .box220, footer .box540 ul, footer .box140, .video, .links, .contact div:last-of-type, .flexslider, .video  {
 	display: none;
 }
- header, section.content, footer, div.box780, div.box460, div.box300, div.box300-home, div.box780 article div:first-of-type, .box780 article div:last-of-type, .contact div:first-of-type {
+ header, section.content, footer, div.box780, div.box460, div.box620, div.box300, div.box300-home, div.box780 article div:first-of-type, .box780 article div:last-of-type, .contact div:first-of-type {
 	width: 97%;
 	float: none;
 
@@ -567,7 +567,11 @@ div.box780, div.box780-single {
 .box780 article div:last-of-type {
 	width: 79.487179487179487179487179487179%;
 }
-div.box460  {
+div.box620 {
+	width: 63.265306122448979591836734693878%;
+	margin-right: 02.0408163265306122448979591836735%;
+}
+div.box460 {
 	width: 46.93877551020408163265306122449%;
 	margin-right: 02.0408163265306122448979591836735%;
 }
@@ -580,7 +584,7 @@ div.box220, footer div.box220 {
 	margin-right: 02.0408163265306122448979591836735%;
 }
 .breadcrumbs {
-	width: 58.974358974358974358974358974359%;
+	width: 78.974358974358974358974358974359%;
 	margin-right: 02.0408163265306122448979591836735%;
 }
 .links {
@@ -670,7 +674,7 @@ div.box300-home {
 footer .box220, aside, .contact div:last-of-type, nav, div.nav-wrapper {
 	display: none;
 }
-.featured div:first-of-type, .featured div:last-of-type, div.box300, div.box300-home, footer div.box540, div.box460, div.box780, .breadcrumbs, .links, .contact div:first-of-type, nav li {
+.featured div:first-of-type, .featured div:last-of-type, div.box300, div.box300-home, footer div.box540, div.box460, div.box620, div.box780, .breadcrumbs, .links, .contact div:first-of-type, nav li {
 	width: 100%;
 }
 div.box380 form {
