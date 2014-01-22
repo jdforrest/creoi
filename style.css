@@ -185,11 +185,11 @@ section.content a:hover, nav a:hover, footer a:hover, .box380 a:hover, section.c
 	color: #FFCD9A;
 }
 
-.box780 {
+.box780, .box780-single {
 	width: 780px;
 	float: left;
 }
-.box780 div:first-of-type, .box460 div:first-of-type {
+.box780 div:first-of-type, .box460 div:first-of-type, .box780-single div:first-of-type {
 	overflow: hidden;
 	margin-bottom: 10px;
 }
@@ -209,6 +209,11 @@ section.content a:hover, nav a:hover, footer a:hover, .box380 a:hover, section.c
 	margin-right: 20px;
 	/*border: 2px solid #2C1600;*/
 }
+.box780-single img{
+	height: auto;
+	float: left;
+	margin-right: 20px;
+}
 .box780 article div:last-of-type {
 	width: 620px;
 	float: left;
@@ -218,8 +223,8 @@ section.content a:hover, nav a:hover, footer a:hover, .box380 a:hover, section.c
 	width: 620px;
 	margin-right: 20px;
 	float: left;
-	background-color: red;
-	margin-bottom: 10px;
+	/* background-color: red; */
+	/* margin-bottom: 10px; */
 }
 .box460 {
 	width: 460px;
@@ -552,7 +557,7 @@ aside {
 .featured div:last-of-type {
 	width: 30.612244897959183673469387755102%;
 }
-div.box780 {
+div.box780, div.box780-single {
 	width: 79.591836734693877551020408163265%;
 }
 .box780 article div:first-of-type {
@@ -618,7 +623,7 @@ nav li {
 .box780 article div:first-of-type {
 	width: 30.612244897959183673469387755102%;
 }
-.box780 article img {
+.box780 article img, div.box780-single img {
 	width: auto;
 }
 .box780 article div:last-of-type {
