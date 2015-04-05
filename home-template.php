@@ -43,10 +43,48 @@
 			<!-- this displays a random project post -->
 			<div class="featured"> 
 				<?php
+					/*
 					$args = array ('orderby'=>'rand', 'posts_per_page'=>'1');
 					$query = new WP_Query($args);
-					while ($query->have_posts()) : $query->the_post(); 
+					while ($query->have_posts()) : $query->the_post();
+					*/ 
 				?>
+				
+				<?php
+					//if English, this will display a featured post from the list of IDs below
+					if (ICL_LANGUAGE_CODE=='en') {
+						$args = array (
+							'orderby'=>'rand', 
+							'posts_per_page'=>'1',
+							'post__in' => array(589, 583, 579, 575, 566, 562, 558, 556, 554, 551), 
+							//ENGLISH POSTS ONLY
+							//this will only display posts whose ID is included in the array above, comma separated
+							//to find the post ID, go to the main Posts page in WordPress. Hover over the title of the post
+							//that you want to include (don't click) and look at the bottom left of the screen
+							//there, you will see the status bar that includes the post ID.
+							//look for "?post=" and the post ID is the number that follows.
+						);
+					}
+					//if Spanish, this will display a featured post from the list of IDs below
+					else{
+						$args = array (
+							'orderby'=>'rand', 
+							'posts_per_page'=>'1',
+							'post__in' => array(615, 610, 600, 591, 585, 573, 569, 560, 544, 537),
+							//SPANISH POSTS ONLY
+							//this will only display posts whose ID is included in the array above, comma separated
+							//to find the post ID, go to the main Posts page in WordPress. Hover over the title of the post
+							//that you want to include (don't click) and look at the bottom left of the screen
+							//there, you will see the status bar that includes the post ID.
+							//look for "?post=" and the post ID is the number that follows.
+						);					
+					}
+					
+					$query = new WP_Query($args);
+					while ($query->have_posts()) : $query->the_post();	
+				?>	
+							
+				
 					<div>
 						<!-- English h1 -->
 						<?php if (ICL_LANGUAGE_CODE=='en') { ?>
@@ -78,6 +116,8 @@
 					</h1>	
 					<p>
 						<?php echo $excerpt; ?>
+						<a href="<?php echo get_permalink(5); ?>">
+						Read more</a>
 					</p>	
 				<!-- About widget in Spanish -->		
 				<?php } else { ?>
@@ -89,6 +129,7 @@
 					</h1>	
 					<p>
 						<?php echo $excerpt; ?>
+						<!-- INSERT SPANISH LEER MAS LINK HERE -->
 					</p>			
 				<?php } ?>		
 					
@@ -96,13 +137,25 @@
 			
 			<div class="box300-home">	
 				<!-- Apply widget in English -->
-				<?php if (ICL_LANGUAGE_CODE=='en') { ?>
+				<?php if (ICL_LANGUAGE_CODE=='en') { ?>		
+
 					<h1><a href="<?php echo get_permalink(8); ?>">
 						<?php echo get_the_title(8); ?></a>
-					</h1>	
+					</h1>
+
+<!-- new content jan 2015 -->
+					<p>
+						As of 2015, CREOi is prioritizing conservation projects in Washington State, USA. Proposals are by invitation only.
+						<a href="<?php echo get_permalink(8); ?>">
+						Read more</a>
+					</p>
+
+<!-- temporarily hiding application content -->
+<!--	
 					<h2>Next deadline for project proposals:</h2>				
-					
+-->					
 					<!-- this dynamically keeps track of next deadline -->
+<!--
 					<?php 
 						$today = date("m.d.");
 						if($today < 04.15){
@@ -115,17 +168,33 @@
 							echo "<h1 class='duedates'>April 15, " . (date("Y") + 1) . "</h1>";
 						}				
 					?>
+-->
+<!--
 					<p>
 						For guidelines and other information, go to <a href="<?php echo get_permalink(8); ?>">Apply.</a>
 					</p>
+-->
 				<!-- Apply widget in Spanish -->
 				<?php } else { ?>
 					<h1><a href="<?php echo get_permalink(47); ?>">
 						<?php echo get_the_title(47); ?></a>
-					</h1>	
-					<h2>Próxima fecha de entrega de propuestas:</h2>				
+					</h1>
+
+<!-- new content jan 2015 -->
+					<p>
+						Empezando en 2015, CREOi está prioritizando proyectos de conservación en el estado de Washington, EE.UU. Las propuestas son únicamente por invitación.
+						<!-- INSERT SPANISH LEER MAS LINK HERE -->
+					</p>	
 					
+					
+					
+					
+<!-- temporarily hiding application content -->
+<!--	
+					<h2>Próxima fecha de entrega de propuestas:</h2>				
+-->					
 					<!-- this dynamically keeps track of next deadline -->
+<!--
 					<?php 
 						$today = date("m.d.");
 						if($today < 04.15){
@@ -138,9 +207,12 @@
 							echo "<h1 class='duedates'>15 de Abril, " . (date("Y") + 1) . "</h1>";
 						}				
 					?>
+-->
+<!--
 					<p>
 						Para obtener los requisitos  y otras informaciones consulte la <a href="<?php echo get_permalink(47); ?>">página Aplicar.</a>
 					</p>
+-->
 				<?php } ?>					
 			</div><!--.box300-home-->
 			
@@ -190,7 +262,7 @@
 						}				
 					?>				
 					<p>
-						Los informes finales se deben presentar 30 días despues de completar el proyecto. 
+						Los informes finales se deben presentar 30 días después de completar el proyecto. 
 						Consulte la página <a href="<?php echo get_permalink(59); ?>">Informes.</a>
 					</p>			
 				<?php } ?>				

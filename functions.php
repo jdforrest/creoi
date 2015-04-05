@@ -59,11 +59,11 @@
 			
 			//Read More text first in English
 			if (ICL_LANGUAGE_CODE=='en') {
-				array_push($words, '<a class="read-more" href="'. get_permalink( get_the_ID() ) . '">Read More</a>');
+				array_push($words, '<a class="read-more" href="'. get_permalink( get_the_ID() ) . '">Read more</a>');
 			} 		
 			//and in Spanish
 			else {
-				array_push($words, '<a class="read-more" href="'. get_permalink( get_the_ID() ) . '">Leer Más</a>');
+				array_push($words, '<a class="read-more" href="'. get_permalink( get_the_ID() ) . '">Leer más</a>');
 			}	
 				
 	      $text = implode(' ', $words);
@@ -73,22 +73,5 @@
 	}
 	remove_filter('get_the_excerpt', 'wp_trim_excerpt');
 	add_filter('get_the_excerpt', 'new_trim_excerpt');
-
-/*
-	//adding read more tag to excerpt	
-	function new_excerpt_more( $more ) {
-			
-		//first in English
-		if (ICL_LANGUAGE_CODE=='en') {
-			return ' <a class="read-more" href="'. get_permalink( get_the_ID() ) . '">Read More</a>';
-		} 
-		
-		//and in Spanish
-		else {
-			return ' <a class="read-more" href="'. get_permalink( get_the_ID() ) . '">Leer Más</a>';
-		}		
-	}
-	add_filter( 'excerpt_more', 'new_excerpt_more' );
-*/
 
 ?>
