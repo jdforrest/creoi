@@ -46,6 +46,6 @@
 
 		</section> <!--.content-->
 	</div><!--.content-wrapper-->
-	<!-- ==== END of index.php ======================= -->
+	<!-- ==== END of index.php ===== -->
 
 <?php get_footer(); ?>
